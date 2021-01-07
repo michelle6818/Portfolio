@@ -68,6 +68,7 @@
   <main id="main">
 
     <!-- ======= Contact Section ======= -->
+    
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
@@ -106,32 +107,45 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+           
+            
+         <form id="form">
+
+            <form role="form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name"/>
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name"/>
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div> 
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="tel" name="phone" class="form-control" id="phone" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="Phone (not required)"/>
                   <div class="validate"></div>
                 </div>
+                
+                
+                
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="How May I Help You Today?"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+              <div class="text-center"><button type="submit" id="button">Send Message</button></div>
+              
+              
+
+            </form-->
 
           </div>
 
@@ -143,6 +157,8 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+  
+
   <footer id="footer">
     <div class="container">
       <div class="copyright">
@@ -175,6 +191,13 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+ <script src="js/site.js"></script>
+
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('user_A1CbOLXgIM1UVURdofwrg')
+  </script>
 
 </body>
 
