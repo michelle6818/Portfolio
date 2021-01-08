@@ -12,9 +12,19 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
+      Swal.fire(
+        'Email Sent!',
+        'I will reply soon!',
+        'success'
+      )
+      document.getElementById("form").reset()
+    }, 
+    (err) => {
       btn.value = 'Send Email';
+      Swal.fire(
+        'Looks like something went wrong',
+        'Please try again!',
+      )
       alert(JSON.stringify(err));
     });
 });
