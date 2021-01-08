@@ -13,16 +13,15 @@ document.getElementById('form')
     .then(() => {
       btn.value = 'Send Email';
       Swal.fire(
-        'Email Sent!',
+        'Thank You!',
         'I will reply soon!',
-        'success'
       )
       document.getElementById("form").reset()
     }, 
     (err) => {
       btn.value = 'Send Email';
       Swal.fire(
-        'Looks like something went wrong',
+        'Looks like something went wrong...',
         'Please try again!',
       )
       alert(JSON.stringify(err));
