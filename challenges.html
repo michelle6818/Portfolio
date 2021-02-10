@@ -54,6 +54,7 @@
           <!--<li><a href="services.html">Services</a></li>-->
           <li><a href="portfolio.html">Projects</a></li>
           <li class="active"><a href="challenges.html">Coding Challenges</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -90,25 +91,19 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal2">
-              <img src="img/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal1">
+              <img src="img/TacoCat.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Taco Cat</h4> 
-                <p>A programming challenge working with palindromes</p>
+                 <h4>Taco Cat</h4>
+                <!-- <p>A programming challenge working with palindromes</p> -->
               </div>
             </div>
-            <div class="col-5"></div>
-            <div class="col">
-              <a class="btn btn-dark float-right" href="https://michelle-tacocat.netlify.app" target="_blank">
-              <span class="min-height25"></span>
-                Check it out!
-              </a>
-            </div>
+            <div class="col"></div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal1">
-              <img src="img/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal2">
+              <img src="img/FizzBuzz.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>FizzBuzz</h4>               
               </div>
@@ -116,8 +111,8 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal1">
-              <img src="img/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal3">
+              <img src="img/SumOfAllFears.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Sum of All Fears</h4> 
               </div>
@@ -125,8 +120,8 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal1">
-              <img src="img/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal4">
+              <img src="img/SunsetHills.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Sunset Hills</h4>  
               </div>
@@ -134,10 +129,10 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal1">
-              <img src="img/portfolio-1.jpg" class="img-fluid" alt="" >
+            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal5">
+              <img src="img/MortgageCalculator.jpg" class="img-fluid" alt="" >
               <div class="portfolio-info">
-                <h4>SuperDog Events</h4>
+                <h4>Mortgage Calculator</h4>
               </div>
             </div>
           </div>
@@ -181,27 +176,10 @@
   <script src="js/main.js"></script>
 
 <!-- Modal Section -->
-<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Thank you for taking a look!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        More to come!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Taco Cat Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -215,11 +193,95 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
+        <a class="btn btn-dark float-right" href="https://michelle-tacocat.netlify.app" target="_blank">Check it out!</a>
       </div>
     </div>
   </div>
 </div>
 
+<!--FizzBuzz Modal-->
+<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">FizzBuzz</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        FizzBuzz was designed using looping functions and modulus operators.  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
+        <a class="btn btn-dark float-right" href="https://michelle-fizzbuzz.netlify.app" target="_blank">Check it out!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sum of All Fears Modal-->
+<div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">The Sum of All Fears</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        The Sum of All Fears is a JavaScript exercise in arrays that will determine if a number is the sum of any two numbers in the array.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
+        <a class="btn btn-dark float-right" href="https://michelle-sumoffears.netlify.app" target="_blank">Check it out!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sunset Hills Modal-->
+<div class="modal fade" id="myModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sunset Hills</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Sunset Hills is a challenge that uses both loops and arrays to determine which buildings will see the sunset.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
+        <a class="btn btn-dark float-right" href="https://michelle-sunsethills.netlify.app" target="_blank">Check it out!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Mortgage Calculator Modal-->
+<div class="modal fade" id="myModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thank you for taking a look!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This Mortgage Calculator introduces the responsive table along with specific formulas to print out a potential payment schedule.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Site</button>
+        <a class="btn btn-dark float-right" href="https://michelle-mortgagecalculator.netlify.app" target="_blank">Check it out!</a>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
