@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  height: 100%;
 }
 
 a {
@@ -28,6 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #main {
   margin-top: 50px;
+  height: 100%;
+  
 }
 
 @media (max-width: 992px) {
@@ -492,6 +495,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
+  
 }
 
 .section-bg {
@@ -595,7 +599,7 @@ section {
 }
 
 .about .content ul li {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .about .content ul i {
