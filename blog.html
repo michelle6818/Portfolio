@@ -73,13 +73,13 @@
 
     <!-- ======= Projects Section ======= -->
     <section id="resume" class="resume" style="background-color: #e9e8e6;height: 100%;">
-      <div class="container" data-aos="fade-up">
+      <div class="container justify" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Blog</h2>
         </div> 
           <h5 class="text-center">Recent blog posts:</h5>     
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <div class="col"></div>
           <div class="col justify-content-center">
             <ul id="portfolio-flters">             
@@ -87,39 +87,98 @@
           </div>
         </div>
 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">      
-<div class="row" data-aos="fade-up" data-aos-delay="100">
+<div class="row justify-content-center"></div>
+<!-- " data-aos="fade-up" data-aos-delay="100"> -->
   <div class="col-lg-12 d-flex justify-content-center">
     <ul id="portfolio-flters">
       <li data-filter=".filter-app">     
     </ul>
   </div>
 </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal10">
+<div class="row justify-content-center">
+  <div class="col">
+      <div class="card" id="blog1">
+          <div class="card-img">
+              <a>
+                  <img class="card-img">
+              </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a></a></h3>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <div>
+                <span></span>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="col">
+      <div class="card" id="blog2">
+          <div class="card-img">
+              <a>
+                  <img class="card-img">
+              </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a></a></h3>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <div>
+                <span></span>
+            </div>
+          </div>
+        </div>
+
+  </div>
+  <div class="col">
+      <div class="card" id="blog3">
+          <div class="card-img">
+              <a>
+                  <img class="card-img">
+              </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a></a></h3>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <div>
+                <span></span>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</div>
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app"> -->
+            <!-- <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal10">
               <img src="img/GitHubRepo1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Creating a Respository</h4>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal11">
               <img src="img/ImagesBlog.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Continuous Deployment</h4>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap" data-toggle="modal" data-target="#myModal12">
               <img src="img/Custom3Blog.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Custom CSS and JS Files</h4>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section><!-- End Portfolio Section -->
@@ -159,9 +218,10 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+ 
 
 <!-- Modal Section -->
-<div class="modal fade" id="myModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="myModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -219,7 +279,41 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<script>
+  fetch('https://michellesblog.herokuapp.com/GetTopXPosts/3',{mode:'cors'})
+.then(response => response.json())
+.then(function(data){    
+  let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };    
+  let blogUrl = "https://michellesblog.herokuapp.com/Posts/TheDetails/"
+  let blogAnchor = $("#blog1 > div.card-body > h3 > a");    
+  let blogLink = `${blogUrl}${data[0].slug}`;
+  blogAnchor.text(data[0].title);
+  blogAnchor.attr("href", blogLink);
+  $("#blog1 > div.card-img > a").attr("href", blogLink)
+  $("#blog1 > div.card-img > a > img").attr("src", `data:${data[0].contentType};base64,${data[0].imageData}`)    
+  $("#blog1 > div.card-body > p").html(data[0].abstract);      
+  $("#blog1 > div.card-footer > div > span").text(`Created: ${new Date(data[0].created).toLocaleDateString("en-US", options)}`)
+  blogAnchor = $("#blog2 > div.card-body > h3 > a");    
+  blogLink = `${blogUrl}${data[1].slug}`;
+  blogAnchor.text(data[1].title);
+  blogAnchor.attr("href", blogLink);
+  $("#blog2 > div.card-img > a").attr("href", blogLink)
+  $("#blog2 > div.card-img > a > img").attr("src", `data:${data[1].contentType};base64,${data[1].imageData}`)    
+  $("#blog2 > div.card-body > p").text(data[1].abstract);      
+  $("#blog2 > div.card-footer > div > span").text(`Created: ${new Date(data[1].created).toLocaleDateString("en-US", options)}`)
+  blogAnchor = $("#blog3 > div.card-body > h3 > a");    
+  blogLink = `${blogUrl}${data[2].slug}`;
+  blogAnchor.text(data[2].title);
+  blogAnchor.attr("href", blogLink);
+  $("#blog3 > div.card-img > a").attr("href", blogLink)
+  $("#blog3 > div.card-img > a > img").attr("src", `data:${data[2].contentType};base64,${data[2].imageData}`)    
+  $("#blog3 > div.card-body > p").text(data[2].abstract);      
+  $("#blog3 > div.card-footer > div > span").text(`Created: ${new Date(data[2].created).toLocaleDateString("en-US", options)}`)
+});
+
+</script>
 </body>
 
 </html>

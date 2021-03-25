@@ -1,38 +1,8 @@
-const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_vijrkfl';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      Swal.fire(
-        'Thank You!',
-        'I will reply soon!',
-      )
-      document.getElementById("form").reset()
-    }, 
-    (err) => {
-      btn.value = 'Send Email';
-      Swal.fire(
-        'Looks like something went wrong...',
-        'Please try again!',
-      )
-      alert(JSON.stringify(err));
-    });
-});
-// API for blog
-fetch('https://michellesblog.herokuapp.com/GetTopXPosts/3'), {mode:'CORS'}
+fetch('[Your API URL Here]')
 .then(response => response.json())
 .then(function(data){    
   let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };    
-  let blogUrl = "https://michellesblog.herokuapp.com/Posts/TheDetails/"
+  let blogUrl = "[Your Blog URL + Slug Routing]"
   let blogAnchor = $("#blog1 > div.card-body > h3 > a");    
   let blogLink = `${blogUrl}${data[0].slug}`;
   blogAnchor.text(data[0].title);
@@ -58,3 +28,4 @@ fetch('https://michellesblog.herokuapp.com/GetTopXPosts/3'), {mode:'CORS'}
   $("#blog3 > div.card-body > p").text(data[2].abstract);      
   $("#blog3 > div.card-footer > div > span").text(`Created: ${new Date(data[2].created).toLocaleDateString("en-US", options)}`)
 });
+</script>
