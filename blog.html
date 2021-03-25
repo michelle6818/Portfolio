@@ -196,7 +196,7 @@
 
 
 <script>
-  fetch('https://michellesblog.herokuapp.com/GetTopXPosts/3', {credentials: 'include'})
+  fetch('https://michellesblog.herokuapp.com/GetTopXPosts/3', {mode:'cors'})
 .then(response => response.json())
 .then(function(data){    
   let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };    
